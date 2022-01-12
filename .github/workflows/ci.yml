@@ -1,4 +1,4 @@
-name: Laravel
+name: CI
 
 on:
   push:
@@ -33,3 +33,17 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
+      
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag amirhwp/mutt
+    - name: Login to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+    - name: Push to Dockerhub
+      run: docker push amirhwp/mutt
