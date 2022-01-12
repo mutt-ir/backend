@@ -19,9 +19,9 @@ In this project, I try to use all my programming skills in the best way to devel
 
 ### Contributers:
 
-- **[Front-end](https://github.ir/mutt-ir)** by **[Milad Pourzakaria](https://github.com/m174d)**
-- **[AndroidApp](https://github.ir/mutt-ir/AndroidApp)** by **[Mohammad Habibpour](https://github.com/mohammadhabibpour)**
-- **[iOSApplication](https://github.ir/mutt-ir/iOSApplication)** by **[Matt Saedi](https://github.com/MattSaedi)**
+- **[Front-End](https://github.ir/mutt-ir)** by **[Milad Pourzakaria](https://github.com/m174d)**
+- **[Android Application](https://github.ir/mutt-ir/AndroidApp)** by **[Mohammad Habibpour](https://github.com/mohammadhabibpour)**
+- **[iOS Application](https://github.ir/mutt-ir/iOSApplication)** by **[Matt Saedi](https://github.com/MattSaedi)**
 
 ## Contributing
 
