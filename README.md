@@ -6,14 +6,14 @@
 
 ## About Mutt
 
-[Mutt.ir](https://mutt.ir) is a cross-platform URL shortener project that is being developed open source. You can view the source of different platforms of this application on [https://github.com/mutt-ir](matt.ir organization github page) and contribute in its development.
+[Mutt.ir](https://mutt.ir) is a cross-platform URL shortener project that is being developed open source. You can view the source of different platforms of this application on <a href="https://github.com/mutt-ir" target="_blank">mutt.ir organization GitHub page</a> and contribute in its development.
 
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## About project
 
-This project is developed using the [https://github.com/laravel/laravel](Laravel framework) and and focuses on the development of APIs related to the Mutt application.
+This project is developed using the <a href="https://github.com/laravel/laravel" target="_blank">Laravel framework</a> and and focuses on the development of APIs related to the Mutt application.
 
 In this project, I try to use all my programming skills in the best way to develop the project. My focus in developing this project is on a test-driven development approach.
 
