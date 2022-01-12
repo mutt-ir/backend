@@ -1,10 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://situla.bitbit.net/filebin/a75da3e99f41547bd1df003588b1d6f927dbd27b3002b103e651d3be7d6afe10/2591f580b50e182ca02e43f4b6c40087e0b00a69f47c6ee2aa16b6e1d7590e88?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=HZXB1J7T0UN34UN512IW%2F20220112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220112T092143Z&X-Amz-Expires=30&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D30&response-content-disposition=filename%3D%22mutt.png%22&response-content-type=image%2Fpng&X-Amz-Signature=7c4d7eccd2a0b89cb120f779f07547a88c647b37556b7dec8af74e3593fc61ea" width="400"></a></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://github.com/mutt-ir/backend/actions/workflows/ci.yml"><img src="https://github.com/mutt-ir/backend/actions/workflows/ci.yml/badge.svg" alt="CI Status"></a>
 </p>
 
 ## About Laravel
