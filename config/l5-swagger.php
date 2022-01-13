@@ -5,7 +5,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'Swagger UI',
+                'title' => 'Mutt | API Documentation',
             ],
 
             'routes' => [

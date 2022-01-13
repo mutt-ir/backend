@@ -6,30 +6,34 @@
         "version": "0.1"
     },
     "paths": {
-        "/users/{id}": {
-            "put": {
-                "summary": "Updates a user",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "Parameter with mutliple examples",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "examples": {
-                            "int": {
-                                "summary": "An int value.",
-                                "value": "1"
-                            },
-                            "uuid": {
-                                "summary": "An UUID value.",
-                                "value": "0006faf6-7a61-426c-9034-579f2cfcfa83"
+        "/api/short": {
+            "post": {
+                "tags": [
+                    "Shortener"
+                ],
+                "summary": "Short a link",
+                "operationId": "6300fb2cdd3e254a6f1002d43c38b551",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "slug": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "url": "https://google.com",
+                                    "slug": "test"
+                                }
                             }
                         }
                     }
-                ],
+                },
                 "responses": {
                     "200": {
                         "description": "OK"
