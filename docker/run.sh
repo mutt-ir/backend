@@ -1,8 +1,15 @@
 #!/bin/bash
 cd /var/www
 
+#if [ "$DB_CONNECTION" = "sqlite" ] ; then \
+# touch "$DB_DATABASE"  ; \
+#    echo "Database $DB_DATABASE for $DB_CONNECTION driver has been created." ; \
+#fi
+
+touch database/database.sqlite
+
 php artisan migrate
 php artisan cache:clear
 php artisan route:cache
 
-/usr/bin/supervisord -c /etc/supervisord.conf
+php artisan serve --host=0.0.0.0 --port=80
