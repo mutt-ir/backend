@@ -8,7 +8,10 @@ cd /var/www
 
 touch database/database.sqlite
 
-php artisan migrate
+chown www-data:www-data database/database.sqlite
+chmod 775 database/database.sqlite
+
+php artisan migrate --force
 php artisan cache:clear
 php artisan route:cache
 
