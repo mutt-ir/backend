@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://xenops.ir/mutt.png" width="500"></a></p>
 
 <p align="center">
-<a href="https://github.com/mutt-ir/backend/actions/workflows/test.yml"><img src="https://github.com/mutt-ir/backend/actions/workflows/test.yml/badge.svg" alt="Test Status"></a><a href="https://github.com/mutt-ir/backend/actions/workflows/docker.yml"><img src="https://github.com/mutt-ir/backend/actions/workflows/docker.yml/badge.svg" alt="docker Status"></a>
+<a href="https://github.com/mutt-ir/backend/actions/workflows/test.yml"><img src="https://github.com/mutt-ir/backend/actions/workflows/test.yml/badge.svg" alt="Test Status"></a><a href="https://github.com/mutt-ir/backend/actions/workflows/docker.yml"><img src="https://github.com/mutt-ir/backend/actions/workflows/deploy.yml/badge.svg" alt="deploy Status"></a>
     
 </p>
 
