@@ -8,7 +8,7 @@ COPY . /var/www
 
 RUN composer install
 
-RUN chown -R www-data:www-data storage bootstrap/cache
+RUN chown -R www-data:www-data /var/www
 RUN chmod -R 775 storage bootstrap/cache
 
 ENTRYPOINT ["/var/www/docker/run.sh"]
