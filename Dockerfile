@@ -1,5 +1,5 @@
 FROM php:8.0.5
-RUN apt-get update -y && apt-get install -y openssl libonig-dev
+RUN apt-get update -y && apt-get install -y openssl libonig-dev git zip unzip
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
