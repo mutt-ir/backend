@@ -8,10 +8,8 @@ on:
     types: [submitted]
 
 jobs:
-  docker:
-
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Wait for tests to succeed
         uses: lewagon/wait-on-check-action@v1.0.0
@@ -35,7 +33,22 @@ jobs:
         with:
           packages: |
             fandogh-cli
+            
       - name: Login to Fandogh
         run: echo 'y' | fandogh login --username "${{ secrets.FANDOGH_USERNAME }}" --password "${{ secrets.FANDOGH_PASSWORD }}"
       - name: Deploy on production
         run: echo 'y' | fandogh service reset -s "${{ secrets.FANDOGH_SERVICE }}"
+
+  deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+        - uses: actions/setup-python@v1
+        - uses: BSFishy/pip-action@v1
+          with:
+            packages: |
+              fandogh-cli
+        - name: Login to Fandogh
+          run: echo 'y' | fandogh login --username "${{ secrets.FANDOGH_USERNAME }}" --password "${{ secrets.FANDOGH_PASSWORD }}"
+        - name: Deploy on production
+          run: echo 'y' | fandogh service reset -s "${{ secrets.FANDOGH_SERVICE }}"
