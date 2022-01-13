@@ -49,7 +49,7 @@ RUN chmod -R ug+w storage
 RUN chown -R www-data:www-data /var/www
 
 # Apply storage permission
-RUN chmod -R 755 storage
+RUN chmod -R 777 storage
 
 # Copy nginx/php/supervisor configs
 RUN cp docker/supervisor.conf /etc/supervisord.conf
