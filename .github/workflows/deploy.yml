@@ -28,17 +28,6 @@ jobs:
       - name: Push to Dockerhub
         run: docker push amirhwp/mutt
 
-      - uses: actions/setup-python@v1
-      - uses: BSFishy/pip-action@v1
-        with:
-          packages: |
-            fandogh-cli
-            
-      - name: Login to Fandogh
-        run: echo 'y' | fandogh login --username "${{ secrets.FANDOGH_USERNAME }}" --password "${{ secrets.FANDOGH_PASSWORD }}"
-      - name: Deploy on production
-        run: echo 'y' | fandogh service reset -s "${{ secrets.FANDOGH_SERVICE }}"
-
   deploy:
       runs-on: ubuntu-latest
       needs: build
