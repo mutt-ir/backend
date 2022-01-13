@@ -1,3 +1,5 @@
+database/database.sqlite
+
 bootstrap/cache/services.php
 
 storage/app/*
