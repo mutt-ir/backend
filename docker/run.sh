@@ -1,15 +1,12 @@
 #!/bin/bash
 cd /var/www
 
-#if [ "$DB_CONNECTION" = "sqlite" ] ; then \
-# touch "$DB_DATABASE"  ; \
-#    echo "Database $DB_DATABASE for $DB_CONNECTION driver has been created." ; \
-#fi
-
-touch database/database.sqlite
-
-chown www-data:www-data database/database.sqlite
-chmod 775 database/database.sqlite
+if [ "$DB_CONNECTION" = "sqlite" ] ; then
+touch "$DB_DATABASE"  ;
+echo "Database $DB_DATABASE for $DB_CONNECTION driver has been created." ;
+chmod 777 $DB_DATABASE
+chown -R www-data:www-data $DB_DATABASE
+fi
 
 php artisan migrate --force
 php artisan cache:clear

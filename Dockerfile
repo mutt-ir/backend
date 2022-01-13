@@ -9,7 +9,6 @@ COPY . /var/www
 RUN composer install
 
 RUN chmod -R 775 storage bootstrap/cache
-
 RUN chmod +x /var/www/docker/run.sh
 
 ENTRYPOINT ["/var/www/docker/run.sh"]

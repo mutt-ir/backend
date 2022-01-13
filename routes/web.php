@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'index 4';
+    return 'API Docs: <a href="/api/docs">Click here!</a> - Updated at: 2022/01/13 21:07';
 });
