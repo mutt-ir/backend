@@ -12,7 +12,7 @@ class URLShortenerController extends Controller
     use ValidationTrait;
 
     protected static $rules = [
-        'url' => 'required|string',
+        'url' => 'required|string|url',
         'slug' => 'sometimes|max:12|unique:App\Models\Link,slug'
     ];
 

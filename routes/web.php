@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return 'API Docs: <a href="/api/docs">Click here!</a> - Updated at: 2022/01/13 21:07';
 });
+
+Route::get('{slug}', [\App\Http\Controllers\MainRoutingController::class, 'routing']);
