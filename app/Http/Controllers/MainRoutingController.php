@@ -11,8 +11,12 @@ class MainRoutingController extends Controller
 {
     public function routing($slug): RedirectResponse
     {
-        $redirectUrl = $this->getRedirectionUrlBySlug($slug);
-        return redirect()->to($redirectUrl);
+        try {
+            $redirectUrl = $this->getRedirectionUrlBySlug($slug);
+            return redirect()->to($redirectUrl);
+        }  catch(\Exception $exception) {
+            throw new NotFoundHttpException();
+        }
     }
 
     public function getRedirectionUrlBySlug($slug) {
