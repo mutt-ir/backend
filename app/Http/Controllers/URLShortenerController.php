@@ -16,33 +16,6 @@ class URLShortenerController extends Controller
         'slug' => 'sometimes|max:12|unique:App\Models\Link,slug'
     ];
 
-    /**
-     * @OA\Post(
-     *     path="/api/short",
-     *     summary="Short a link",
-     *     tags={"Shortener"},
-     *     @OA\RequestBody(
-     *         @OA\MediaType(
-     *             mediaType="application/json",
-     *             @OA\Schema(
-     *                 @OA\Property(
-     *                     property="url",
-     *                     type="string"
-     *                 ),
-     *                 @OA\Property(
-     *                     property="slug",
-     *                     type="string"
-     *                 ),
-     *                 example={"url": "https://google.com", "slug": "test"}
-     *             )
-     *         )
-     *     ),
-     *     @OA\Response(
-     *         response=200,
-     *         description="OK",
-     *     )
-     * )
-     */
     public function short(Request $request): APIShortResponse
     {
         $this->validateRequest($request->all(), self::$rules);

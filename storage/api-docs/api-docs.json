@@ -12,33 +12,95 @@
                     "Shortener"
                 ],
                 "summary": "Short a link",
-                "operationId": "6300fb2cdd3e254a6f1002d43c38b551",
                 "requestBody": {
                     "content": {
                         "application/json": {
                             "schema": {
-                                "properties": {
-                                    "url": {
-                                        "type": "string"
-                                    },
-                                    "slug": {
-                                        "type": "string"
+                                "allOf": [
+                                    {
+                                        "$ref": "#/components/schemas/APIShortRequest"
                                     }
-                                },
-                                "type": "object",
-                                "example": {
-                                    "url": "https://google.com",
-                                    "slug": "test"
-                                }
+                                ]
                             }
                         }
                     }
                 },
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/APIShortResponse"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
                     }
                 }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "APIResponse": {
+                "title": "APIResponse",
+                "properties": {
+                    "status": {
+                        "type": "boolean"
+                    },
+                    "data": {
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "APIShortRequest": {
+                "title": "APIShortRequest",
+                "required": [
+                    "url"
+                ],
+                "properties": {
+                    "url": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string",
+                        "maxLength": 12
+                    }
+                },
+                "type": "object"
+            },
+            "APIShortResponse": {
+                "title": "APIShortResponse",
+                "type": "object",
+                "allOf": [
+                    {
+                        "properties": {
+                            "data": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "slug": {
+                                                "type": "string"
+                                            },
+                                            "shortened_url": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "$ref": "#/components/schemas/APIResponse"
+                    }
+                ]
             }
         }
     },
