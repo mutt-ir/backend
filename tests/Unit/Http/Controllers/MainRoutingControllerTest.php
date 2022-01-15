@@ -33,7 +33,7 @@ class MainRoutingControllerTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
+        $mockLink = Link::short('https://google.com', Link::getSlug());
         [
             'slug' => self::$mockLinkSlug,
             'url' => self::$mockLinkRedirectionUrl
