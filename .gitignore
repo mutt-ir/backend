@@ -14,3 +14,4 @@ yarn-error.log
 /.idea
 /.vscode
 /storage/database.sqlite
+/storage/test_database.sqlite

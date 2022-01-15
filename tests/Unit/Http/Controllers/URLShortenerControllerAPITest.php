@@ -2,16 +2,16 @@
 
 namespace Tests\Unit\Http\Controllers;
 
+use App\Models\Link;
 use Tests\TestCase;
 
 class URLShortenerControllerAPITest extends TestCase
 {
     public function test_api_short_no_slug()
     {
-        $response = $this->post('/api/short', [
+        $this->post('/api/short', [
             'url' => 'https://google.com',
-        ]);
-        $response->assertJsonStructure([
+        ])->assertJsonStructure([
            'status',
            'data' => [
                'shortened_url',
@@ -30,6 +30,19 @@ class URLShortenerControllerAPITest extends TestCase
     {
         $response = $this->post('/api/short', []);
         $response->assertJsonStructure([
+            'status',
+            'errors'
+        ])->assertJson([
+            'status' => false,
+        ])->assertStatus(422);
+    }
+
+    public function test_api_short_validation_link()
+    {
+        $this->post('/api/short', [
+            'url' => 'invalid link',
+            'slug' => Link::getSlug()
+        ])->assertJsonStructure([
             'status',
             'errors'
         ])->assertJson([
